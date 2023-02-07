@@ -1,0 +1,89 @@
+:root {
+    --colores-interfaz-beige: #F1DBBF;
+    --colores-interfaz-verde: #698269;
+    --color-tablero-rojo: #AA5656;
+    --color-tablero-amarillo: #E4C988;
+    --color-tablero-azul: #6096B4;
+    --color-bordes-tablero: #323232;
+    --fuente-principal: 'VT323', monospace;
+}
+
+body{
+    background-color: var(--colores-interfaz-beige);
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--colores-interfaz-verde);
+}
+.contenedor-visor-rondas{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.visor-rondas{
+    background-color: var(--colores-interfaz-beige);
+    border-top: 2px solid #a39481;
+    border-left: 2px solid #a39481;
+    border-right: 2px solid #dfcbb1;
+    border-bottom: 2px solid #dfcbb1;
+    height: 30px;
+    width: 300px;
+    font-size: 30px;
+    font-family: var(--fuente-principal);
+    color: var(--colores-interfaz-verde);
+    text-align: start;
+}
+.boton-jugar{
+    background-color: var(--colores-interfaz-beige);
+    border-top: 2px solid #a39481;
+    border-left: 2px solid #a39481;
+    border-right: 2px solid #dfcbb1;
+    border-bottom: 2px solid #dfcbb1;
+    color: var(--colores-interfaz-verde);
+    font-size: 20px;
+    font-family: var(--fuente-principal);
+}
+.boton-jugar:hover{
+    background-color: rgb(237, 207, 168);
+}
+.contenedor-tablero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.tablero{
+    display: grid;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 250px 250px;
+    height: 500px;
+    width: 500px;
+    border: 4px solid var(--color-bordes-tablero);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #a39481;
+}
+.color-verde{
+    border-right: 2px solid var(--color-bordes-tablero);
+    border-bottom: 2px solid var(--color-bordes-tablero);
+    background-color: var(--colores-interfaz-verde);
+}
+.color-rojo{
+    border-left: 2px solid var(--color-bordes-tablero);
+    border-bottom: 2px solid var(--color-bordes-tablero);
+    background-color: var(--color-tablero-rojo);
+}
+.color-amarillo{
+    border-right: 2px solid var(--color-bordes-tablero);
+    border-top: 2px solid var(--color-bordes-tablero);
+    background-color: var(--color-tablero-amarillo);
+}
+.color-azul{
+    border-left: 2px solid var(--color-bordes-tablero);
+    border-top: 2px solid var(--color-bordes-tablero);
+    background-color: var(--color-tablero-azul);
+}
