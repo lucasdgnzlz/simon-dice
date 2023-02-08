@@ -38,6 +38,8 @@ header{
     text-align: start;
 }
 .boton-jugar{
+    width: 176px;
+    height: 26px;
     background-color: var(--colores-interfaz-beige);
     border-top: 2px solid #a39481;
     border-left: 2px solid #a39481;
