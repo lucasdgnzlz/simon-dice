@@ -5,6 +5,12 @@
     --color-tablero-amarillo: #E4C988;
     --color-tablero-azul: #6096B4;
     --color-bordes-tablero: #323232;
+
+    --color-tablero-verde-iluminado: #448444;
+    --color-tablero-rojo-iluminado: #a82c2c;
+    --color-tablero-amarillo-iluminado: #dcae43;
+    --color-tablero-azul-iluminado: #257dac;
+
     --fuente-principal: 'VT323', monospace;
 }
 
@@ -89,3 +95,17 @@ header{
     border-top: 2px solid var(--color-bordes-tablero);
     background-color: var(--color-tablero-azul);
 }
+
+#mostrar-verde-iluminado{
+    background-color: var(--color-tablero-verde-iluminado);
+}
+#mostrar-rojo-iluminado{
+    background-color: var(--color-tablero-rojo-iluminado);
+}
+#mostrar-amarillo-iluminado{
+    background-color: var(--color-tablero-amarillo-iluminado);
+}
+#mostrar-azul-iluminado{
+    background-color: var(--color-tablero-azul-iluminado);
+}
+
