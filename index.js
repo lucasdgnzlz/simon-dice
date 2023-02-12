@@ -1,10 +1,5 @@
 const botonJugar = document.querySelector(".boton-jugar");
 
-const colorVerdeTablero = document.querySelector(".color-verde");
-const colorRojoTablero = document.querySelector(".color-rojo");
-const colorAmarilloTablero = document.querySelector(".color-amarillo");
-const colorAzulTablero = document.querySelector(".color-azul");
-
 let juegoComenzado = false;
 let indicadorRonda = 0;
 let indicadorDeTurno = "";
@@ -77,6 +72,6 @@ botonJugar.onclick = function(){
     imprimirNumeroDeRonda();
     actualizarTurnos();
     imprimirIndicadorTurno();
-
+    
     return false;
 }
