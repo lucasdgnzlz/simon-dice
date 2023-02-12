@@ -1,10 +1,5 @@
 const botonJugar = document.querySelector(".boton-jugar");
 
-const colorVerdeTablero = document.querySelector(".color-verde");
-const colorRojoTablero = document.querySelector(".color-rojo");
-const colorAmarilloTablero = document.querySelector(".color-amarillo");
-const colorAzulTablero = document.querySelector(".color-azul");
-
 let juegoComenzado = false;
 let indicadorRonda = 0;
 let indicadorDeTurno = "";
@@ -70,13 +65,33 @@ function imprimirIndicadorTurno(){
     }
 }
 
-botonJugar.onclick = function(){
-    comenzarJuego();
-    desactivarBotonJugar();
+function gestionarRonda(){
     actualizarNumeroDeRonda();
     imprimirNumeroDeRonda();
     actualizarTurnos();
     imprimirIndicadorTurno();
+}
+
+function gestionarActualizacionesDeRonda(){
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    setTimeout(function(){
+        actualizarNumeroDeRonda();
+        imprimirNumeroDeRonda();
+    }, retrasoEnMilisegundos)
+}
+
+function gestionarActualizacionesTurno(){
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    setTimeout(function(){
+        actualizarTurnos();
+        imprimirIndicadorTurno();
+    }, retrasoEnMilisegundos)
+}
+
+botonJugar.onclick = function(){
+    comenzarJuego();
+    desactivarBotonJugar();
+    gestionarRonda();
 
     return false;
 }
