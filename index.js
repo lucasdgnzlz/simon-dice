@@ -92,6 +92,7 @@ botonJugar.onclick = function(){
     comenzarJuego();
     desactivarBotonJugar();
     gestionarRonda();
+    secuenciaMaquina();
 
     return false;
 }
