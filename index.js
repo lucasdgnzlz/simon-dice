@@ -73,7 +73,7 @@ function gestionarRonda(){
 }
 
 function gestionarActualizacionesDeRonda(){
-    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 1150;
     setTimeout(function(){
         actualizarNumeroDeRonda();
         imprimirNumeroDeRonda();
@@ -81,7 +81,7 @@ function gestionarActualizacionesDeRonda(){
 }
 
 function gestionarActualizacionesTurno(){
-    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 1150;
     setTimeout(function(){
         actualizarTurnos();
         imprimirIndicadorTurno();
@@ -90,7 +90,6 @@ function gestionarActualizacionesTurno(){
 
 botonJugar.onclick = function(){
     comenzarJuego();
-    desactivarBotonJugar();
     gestionarRonda();
     secuenciaMaquina();
 
