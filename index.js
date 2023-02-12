@@ -65,13 +65,33 @@ function imprimirIndicadorTurno(){
     }
 }
 
-botonJugar.onclick = function(){
-    comenzarJuego();
-    desactivarBotonJugar();
+function gestionarRonda(){
     actualizarNumeroDeRonda();
     imprimirNumeroDeRonda();
     actualizarTurnos();
     imprimirIndicadorTurno();
-    
+}
+
+function gestionarActualizacionesDeRonda(){
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    setTimeout(function(){
+        actualizarNumeroDeRonda();
+        imprimirNumeroDeRonda();
+    }, retrasoEnMilisegundos)
+}
+
+function gestionarActualizacionesTurno(){
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    setTimeout(function(){
+        actualizarTurnos();
+        imprimirIndicadorTurno();
+    }, retrasoEnMilisegundos)
+}
+
+botonJugar.onclick = function(){
+    comenzarJuego();
+    desactivarBotonJugar();
+    gestionarRonda();
+
     return false;
 }
