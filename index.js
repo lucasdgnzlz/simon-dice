@@ -65,7 +65,7 @@ function imprimirIndicadorTurno(){
     }
 }
 
-function gestionarRonda(){
+function gestionarPrimeraRonda(){
     actualizarNumeroDeRonda();
     imprimirNumeroDeRonda();
     actualizarTurnos();
@@ -91,7 +91,7 @@ function gestionarActualizacionesTurno(){
 botonJugar.onclick = function(){
     comenzarJuego();
     desactivarBotonJugar();
-    gestionarRonda();
+    gestionarPrimeraRonda();
     secuenciaMaquina();
 
     return false;
