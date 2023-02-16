@@ -69,6 +69,43 @@ function imprimirIndicadorTurno(){
     }
 }
 
+function desactivarColoresParaUsuario(){
+    const botonesColoresTablero = document.querySelectorAll (".colores-tablero");
+
+    if(indicadorDeTurno === "maquina"){
+        for(let i = 0; i < botonesColoresTablero.length; i++){
+            botonesColoresTablero[i].disabled = true;
+        }
+    }
+    else if(juegoComenzado === false){
+        for(let i = 0; i < botonesColoresTablero.length; i++){
+            botonesColoresTablero[i].disabled = true;
+        }
+    }
+    else if(indicadorDeTurno === "usuario"){
+        return false;
+    }
+    else{
+        return false;
+    }
+}
+
+function activarColoresParaUsuario(){
+    const botonesColoresTablero = document.querySelectorAll (".colores-tablero");
+
+    if(indicadorDeTurno === "maquina"){
+        return false;
+    }
+    else if(indicadorDeTurno === "usuario"){
+        for(let i = 0; i < botonesColoresTablero.length; i++){
+            botonesColoresTablero[i].disabled = false;
+        }
+    }
+    else{
+        return false;
+    }
+}
+
 function gestionarPrimeraRonda(){
     actualizarNumeroDeRonda();
     imprimirNumeroDeRonda();
@@ -89,6 +126,13 @@ function gestionarActualizacionesTurno(){
     setTimeout(function(){
         actualizarTurnos();
         imprimirIndicadorTurno();
+    }, retrasoEnMilisegundos)
+}
+
+function gestionarActivacionDeColoresUsuario(){
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 1000;
+    setTimeout(function(){
+        activarColoresParaUsuario();
     }, retrasoEnMilisegundos)
 }
 
