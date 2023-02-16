@@ -78,21 +78,29 @@ header{
 .color-verde{
     border-right: 2px solid var(--color-bordes-tablero);
     border-bottom: 2px solid var(--color-bordes-tablero);
+    border-left: 0px;
+    border-top: 0px;
     background-color: var(--colores-interfaz-verde);
 }
 .color-rojo{
     border-left: 2px solid var(--color-bordes-tablero);
     border-bottom: 2px solid var(--color-bordes-tablero);
+    border-right: 0px;
+    border-top: 0px;
     background-color: var(--color-tablero-rojo);
 }
 .color-amarillo{
     border-right: 2px solid var(--color-bordes-tablero);
     border-top: 2px solid var(--color-bordes-tablero);
+    border-left: 0px;
+    border-bottom: 0px;
     background-color: var(--color-tablero-amarillo);
 }
 .color-azul{
     border-left: 2px solid var(--color-bordes-tablero);
     border-top: 2px solid var(--color-bordes-tablero);
+    border-right: 0px;
+    border-bottom: 0px;
     background-color: var(--color-tablero-azul);
 }
 
