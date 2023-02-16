@@ -136,6 +136,16 @@ function gestionarActivacionDeColoresUsuario(){
     }, retrasoEnMilisegundos)
 }
 
+function terminarJuego(){
+    listaSecuenciaUsuario = [];
+    listaSecuenciaMaquina = [];
+    indicadorRonda = 0;
+    indicadorDeTurno = "";
+    juegoComenzado = false;
+    botonJugar.textContent = "Fin del juego!";
+    activarBotonJugar();
+}
+
 botonJugar.onclick = function(){
     comenzarJuego();
     desactivarBotonJugar();
