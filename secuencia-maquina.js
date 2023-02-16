@@ -95,6 +95,10 @@ function manejarColoresElegidosMaquina(){
 function secuenciaMaquina(){
     let colorMaquina = seleccionarColorMaquina();
     guardarColorMaquinaEnLista(colorMaquina);
-    gestionarActualizacionesTurno();
     manejarColoresElegidosMaquina();
+
+    setTimeout(function(){
+        gestionarActualizacionesTurno();
+        gestionarActivacionDeColoresUsuario();
+    }, 700);
 }
