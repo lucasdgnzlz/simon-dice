@@ -73,7 +73,7 @@ function gestionarPrimeraRonda(){
 }
 
 function gestionarActualizacionesDeRonda(){
-    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 1000;
     setTimeout(function(){
         actualizarNumeroDeRonda();
         imprimirNumeroDeRonda();
@@ -81,7 +81,7 @@ function gestionarActualizacionesDeRonda(){
 }
 
 function gestionarActualizacionesTurno(){
-    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 2200;
+    const retrasoEnMilisegundos = listaSecuenciaMaquina.length * 1000;
     setTimeout(function(){
         actualizarTurnos();
         imprimirIndicadorTurno();
