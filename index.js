@@ -24,6 +24,10 @@ function desactivarBotonJugar(){
     }
 }
 
+function activarBotonJugar(){
+    botonJugar.disabled = false;
+}
+
 function actualizarNumeroDeRonda(){
     if(juegoComenzado){
         indicadorRonda++;
