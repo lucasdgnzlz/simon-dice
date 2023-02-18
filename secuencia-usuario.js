@@ -34,23 +34,23 @@ function validarColorCorrecto(){
     }
 }
 
-function mostrarColorElegidoUsuario($color){
+function mostrarColorElegidoUsuario(color){
     if(indicadorDeTurno === "usuario"){
-        if($color === coloresTablero.colorVerde){
-            $color.id = "mostrar-verde-iluminado";
+        if(color === coloresTablero.$colorVerde){
+            color.id = "mostrar-verde-iluminado";
         }
-        if($color === coloresTablero.colorRojo){
-            $color.id = "mostrar-rojo-iluminado";
+        if(color === coloresTablero.$colorRojo){
+            color.id = "mostrar-rojo-iluminado";
         }
-        if($color === coloresTablero.colorAmarillo){
-            $color.id = "mostrar-amarillo-iluminado";
+        if(color === coloresTablero.$colorAmarillo){
+            color.id = "mostrar-amarillo-iluminado";
         }
-        if($color === coloresTablero.colorAzul){
-            $color.id = "mostrar-azul-iluminado";
+        if(color === coloresTablero.$colorAzul){
+            color.id = "mostrar-azul-iluminado";
         }
     
         setTimeout(function(){
-            $color.id = "";
+            color.id = "";
         }, 300);
     }
     else{
@@ -82,23 +82,23 @@ function secuenciaUsuario(){
     desactivarColoresParaUsuario();
 }
 
-coloresTablero.colorVerde.onclick = function(){
-    guardarColorUsuario(coloresTablero.colorVerde);
-    mostrarColorElegidoUsuario(coloresTablero.colorVerde);
+coloresTablero.$colorVerde.onclick = function(){
+    guardarColorUsuario(coloresTablero.$colorVerde);
+    mostrarColorElegidoUsuario(coloresTablero.$colorVerde);
     validarColorCorrecto();
 }
-coloresTablero.colorRojo.onclick = function(){
-    guardarColorUsuario(coloresTablero.colorRojo);
-    mostrarColorElegidoUsuario(coloresTablero.colorRojo);
+coloresTablero.$colorRojo.onclick = function(){
+    guardarColorUsuario(coloresTablero.$colorRojo);
+    mostrarColorElegidoUsuario(coloresTablero.$colorRojo);
     validarColorCorrecto();
 }
-coloresTablero.colorAmarillo.onclick = function(){
-    guardarColorUsuario(coloresTablero.colorAmarillo);
-    mostrarColorElegidoUsuario(coloresTablero.colorAmarillo);
+coloresTablero.$colorAmarillo.onclick = function(){
+    guardarColorUsuario(coloresTablero.$colorAmarillo);
+    mostrarColorElegidoUsuario(coloresTablero.$colorAmarillo);
     validarColorCorrecto();
 }
-coloresTablero.colorAzul.onclick = function(){
-    guardarColorUsuario(coloresTablero.colorAzul);
-    mostrarColorElegidoUsuario(coloresTablero.colorAzul);
+coloresTablero.$colorAzul.onclick = function(){
+    guardarColorUsuario(coloresTablero.$colorAzul);
+    mostrarColorElegidoUsuario(coloresTablero.$colorAzul);
     validarColorCorrecto();
 }
