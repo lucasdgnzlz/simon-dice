@@ -1,14 +1,14 @@
-const botonJugar = document.querySelector(".boton-jugar");
+const $botonJugar = document.querySelector(".boton-jugar");
 
 let juegoComenzado = false;
 let indicadorRonda = 0;
 let indicadorDeTurno = "";
 
 let coloresTablero = {
-    colorVerde: document.querySelector(".color-verde"),
-    colorRojo: document.querySelector(".color-rojo"),
-    colorAmarillo: document.querySelector(".color-amarillo"),
-    colorAzul: document.querySelector(".color-azul")
+    $colorVerde: document.querySelector(".color-verde"),
+    $colorRojo: document.querySelector(".color-rojo"),
+    $colorAmarillo: document.querySelector(".color-amarillo"),
+    $colorAzul: document.querySelector(".color-azul")
 }
 
 function comenzarJuego(){
@@ -17,7 +17,7 @@ function comenzarJuego(){
 
 function desactivarBotonJugar(){
     if(juegoComenzado){
-        botonJugar.disabled = true;
+        $botonJugar.disabled = true;
     }
     else{
         return false;
@@ -25,7 +25,7 @@ function desactivarBotonJugar(){
 }
 
 function activarBotonJugar(){
-    botonJugar.disabled = false;
+    $botonJugar.disabled = false;
 }
 
 function actualizarNumeroDeRonda(){
@@ -38,8 +38,8 @@ function actualizarNumeroDeRonda(){
 }
 
 function imprimirNumeroDeRonda(){
-    const visorRonda = document.querySelector(".visor-rondas");
-    visorRonda.value = `Ronda #${indicadorRonda}`;
+    const $visorRonda = document.querySelector(".visor-rondas");
+    $visorRonda.value = `Ronda #${indicadorRonda}`;
 }
 
 function actualizarTurnos(){
@@ -59,10 +59,10 @@ function actualizarTurnos(){
 
 function imprimirIndicadorTurno(){
     if(indicadorDeTurno === "maquina"){
-        botonJugar.textContent = `Turno de la ${indicadorDeTurno}!`;
+        $botonJugar.textContent = `Turno de la ${indicadorDeTurno}!`;
     }
     else if(indicadorDeTurno === "usuario"){
-        botonJugar.textContent = "Es tu turno!";
+        $botonJugar.textContent = "Es tu turno!";
     }
     else{
         return false;
@@ -70,16 +70,16 @@ function imprimirIndicadorTurno(){
 }
 
 function desactivarColoresParaUsuario(){
-    const botonesColoresTablero = document.querySelectorAll (".colores-tablero");
+    const $botonesColoresTablero = document.querySelectorAll (".colores-tablero");
 
     if(indicadorDeTurno === "maquina"){
-        for(let i = 0; i < botonesColoresTablero.length; i++){
-            botonesColoresTablero[i].disabled = true;
+        for(let i = 0; i < $botonesColoresTablero.length; i++){
+            $botonesColoresTablero[i].disabled = true;
         }
     }
     else if(juegoComenzado === false){
-        for(let i = 0; i < botonesColoresTablero.length; i++){
-            botonesColoresTablero[i].disabled = true;
+        for(let i = 0; i < $botonesColoresTablero.length; i++){
+            $botonesColoresTablero[i].disabled = true;
         }
     }
     else if(indicadorDeTurno === "usuario"){
@@ -91,14 +91,14 @@ function desactivarColoresParaUsuario(){
 }
 
 function activarColoresParaUsuario(){
-    const botonesColoresTablero = document.querySelectorAll (".colores-tablero");
+    const $botonesColoresTablero = document.querySelectorAll (".colores-tablero");
 
     if(indicadorDeTurno === "maquina"){
         return false;
     }
     else if(indicadorDeTurno === "usuario"){
-        for(let i = 0; i < botonesColoresTablero.length; i++){
-            botonesColoresTablero[i].disabled = false;
+        for(let i = 0; i < $botonesColoresTablero.length; i++){
+            $botonesColoresTablero[i].disabled = false;
         }
     }
     else{
@@ -142,11 +142,11 @@ function terminarJuego(){
     indicadorRonda = 0;
     indicadorDeTurno = "";
     juegoComenzado = false;
-    botonJugar.textContent = "Fin del juego!";
+    $botonJugar.textContent = "Fin del juego!";
     activarBotonJugar();
 }
 
-botonJugar.onclick = function(){
+$botonJugar.onclick = function(){
     comenzarJuego();
     desactivarBotonJugar();
     gestionarPrimeraRonda();
