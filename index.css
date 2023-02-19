@@ -18,6 +18,7 @@ body{
     background-color: var(--colores-interfaz-beige);
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 header{
     display: flex;
