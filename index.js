@@ -3,6 +3,7 @@ const $botonJugar = document.querySelector(".boton-jugar");
 let juegoComenzado = false;
 let indicadorRonda = 0;
 let indicadorDeTurno = "";
+let recordUsuario = 0;
 
 let coloresTablero = {
     $colorVerde: document.querySelector(".color-verde"),
@@ -136,9 +137,31 @@ function gestionarActivacionDeColoresUsuario(){
     }, retrasoEnMilisegundos)
 }
 
+function calcularRecordUsuario(){
+    if(recordUsuario === 0){
+        recordUsuario = indicadorRonda;
+    }
+    else if(recordUsuario < indicadorRonda){
+        recordUsuario = indicadorRonda;
+    }
+    else if(recordUsuario > indicadorRonda){
+        return false;
+    }
+    else{
+        return false;
+    }
+}
+
+function imprimirRecordUsuario(){
+    const $recordRondasUsuario = document.querySelector(".record-usuario");
+    $recordRondasUsuario.innerText = `Récord: Ronda#${recordUsuario}`;
+}
+
 function terminarJuego(){
     listaSecuenciaUsuario = [];
     listaSecuenciaMaquina = [];
+    calcularRecordUsuario();
+    imprimirRecordUsuario();
     indicadorRonda = 0;
     indicadorDeTurno = "";
     juegoComenzado = false;
