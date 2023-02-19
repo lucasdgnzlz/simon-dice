@@ -103,6 +103,14 @@ header{
     border-bottom: 0px;
     background-color: var(--color-tablero-azul);
 }
+.contenedor-record{
+    padding: 0 10px;
+}
+.record-usuario{
+    font-family: var(--fuente-principal);
+    font-size: 30px;
+    color: var(--colores-interfaz-verde);
+}
 
 #mostrar-verde-iluminado{
     background-color: var(--color-tablero-verde-iluminado);
